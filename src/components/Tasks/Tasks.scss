@@ -1,0 +1,19 @@
+// Task Styles
+
+@import "../../assets/styles/base/variables.scss";
+
+.todo {
+    &__tasks {
+        height: 11.31rem;
+        max-width: 23rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.375rem;
+        overflow: auto;
+
+        &_passed {
+            height: 9.38rem;
+        }
+    }
+}

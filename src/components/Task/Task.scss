@@ -1,0 +1,83 @@
+// Task Styles
+
+@import "../../assets/styles/base/variables.scss";
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding-right: 0.375rem;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        height: 0.0625rem;
+        width: calc(100% - 2.375rem);
+        position: absolute;
+        right: 0;
+        bottom: -0.5rem;
+        background: $gray2;
+    }
+
+    &__name {
+        font-weight: $medium;
+        line-height: 94%;
+        margin-bottom: 0.125rem;
+        transition: 0.3s;
+    }
+
+    &__descr {
+        font-size: 0.88rem;
+        line-height: 107%;
+        color: $gray1;
+        transition: 0.3s;
+    }
+
+    &__label {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        border: 0.0625rem solid $gray3;
+        position: relative;
+        transition: 0.3s;
+
+        &::before {
+            content: "";
+            height: 0.875rem;
+            width: 1.1875rem;
+            background: url("../../assets/img/done.svg") no-repeat center / 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 0.3s;
+        }
+    }
+
+    &_passed &__label {
+        border-color: $white;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &_passed &__name,
+    &_passed &__descr {
+        color: $gray1;
+        text-decoration: line-through !important;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 0.625rem;
+    }
+
+    .icon-btn {
+        color: $red1;
+    }
+}
