@@ -1,5 +1,6 @@
 .tasks {
-    min-height: 11.31rem;
+    min-height: 3rem;
+    max-height: 11.31rem;
     max-width: 23rem;
     width: 100%;
     display: flex;
@@ -9,7 +10,7 @@
 }
 
 .tasks_passed {
-    min-height: 9.38rem;
+    max-height: 9.38rem;
 }
 
 .enter,
