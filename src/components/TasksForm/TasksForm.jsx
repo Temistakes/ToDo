@@ -3,6 +3,7 @@ import { Form, Formik } from "formik";
 import * as yup from "yup";
 import Button from "../utils/Button/Button";
 import InputGroup from "../utils/InputGroup/InputGroup";
+import cl from "./TasksForm.module.css";
 
 const TasksForm = ({ addTask }) => {
     const validationSchema = yup.object().shape({
@@ -23,16 +24,16 @@ const TasksForm = ({ addTask }) => {
             validationSchema={validationSchema}
         >
             {({ values, touched, errors }) => (
-                <Form className="todo__form">
+                <Form className={cl.form}>
                     <InputGroup
-                        groupName="Name:"
+                        groupName="Имя:"
                         name="name"
                         className={touched.name && errors.name && "error"}
                         value={values.name}
                         id="name"
                     />
                     <InputGroup
-                        groupName="Descr:"
+                        groupName="Описание:"
                         name="descr"
                         className={touched.descr && errors.descr && "error"}
                         value={values.descr}

@@ -16,3 +16,68 @@
         padding: 0 $containerPadding;
     }
 }
+
+// Buttons
+
+.themeBtn {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: $primaryColor;
+    box-shadow: 0 0 1rem $shadow;
+    transition: 0.3s;
+}
+
+.themeBtn svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.themeBtn:hover {
+    background: #d271ff;
+}
+
+.wrapper.dark .themeBtn {
+    box-shadow: 0 0 1rem $shadowWhite;
+}
+
+@media all and (max-width: 600px) {
+    .themeBtn {
+        right: 1rem;
+        bottom: 1rem;
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+
+// Theme
+
+.wrapper.dark {
+    background: #444444;
+    color: white;
+}
+
+.wrapper {
+    transition: 0.3s background ease, 0.3s color ease !important;
+}
+
+.wrapper.dark .container section {
+    background: #333333;
+}
+
+// Track
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0;
+}

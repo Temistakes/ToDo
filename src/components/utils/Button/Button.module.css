@@ -1,19 +1,20 @@
-// Input Group Styles
-
-@import "../../../assets/styles/base/variables.scss";
-
 .btn {
     height: 2.56rem;
     width: 100%;
-    background: $primaryColor;
-    color: $white;
+    background: #e1a0ff;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: $bold;
+    font-weight: 700;
     font-size: 1.25rem;
     line-height: 125%;
     letter-spacing: -0.05em;
     text-align: center;
     border-radius: 0.38rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d271ff;
 }

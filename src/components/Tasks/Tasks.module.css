@@ -1,0 +1,40 @@
+.tasks {
+    min-height: 11.31rem;
+    max-width: 23rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+    overflow-y: auto;
+}
+
+.tasks_passed {
+    min-height: 9.38rem;
+}
+
+.enter,
+.appear {
+    transform: translate(-3rem, 0);
+    opacity: 0;
+}
+
+.enterActive,
+.enterDone,
+.appearActive,
+.appearDone {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s transform, 0.5s opacity;
+}
+
+.exit {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.exitActive,
+.exitDone {
+    transform: translate(3rem, 0);
+    opacity: 0;
+    transition: 0.5s transform, 0.5s opacity;
+}

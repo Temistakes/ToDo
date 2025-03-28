@@ -1,0 +1,79 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding-right: 0.375rem;
+    cursor: pointer;
+}
+
+.task::before {
+    content: "";
+    height: 0.0625rem;
+    width: calc(100% - 2.375rem);
+    position: absolute;
+    right: 0;
+    bottom: -0.5rem;
+    background: #d9d9d9;
+}
+
+.name {
+    font-weight: 500;
+    line-height: 94%;
+    margin-bottom: 0.125rem;
+    transition: 0.3s;
+}
+
+.descr {
+    font-size: 0.88rem;
+    line-height: 107%;
+    color: #bebebe;
+    transition: 0.3s;
+}
+
+.label {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 0.0625rem solid #c9c9c9;
+    position: relative;
+    transition: 0.3s;
+}
+
+.label::before {
+    content: "";
+    height: 0.875rem;
+    width: 1.1875rem;
+    background: url("../../assets/img/done.svg") no-repeat center / 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.task_passed .label {
+    border-color: transparent;
+}
+
+.task_passed .label::before {
+    opacity: 1;
+}
+
+.task_passed .name,
+.task_passed .descr {
+    color: #bebebe;
+    text-decoration: line-through !important;
+}
+
+.wrap {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.iconBtn {
+    color: #f99;
+}

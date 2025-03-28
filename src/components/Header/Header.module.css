@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.header::after {
+    content: "";
+    width: 6.25rem;
+    height: 0.0625rem;
+    background: #bebebe;
+    display: inline-block;
+    margin-top: 0.875rem;
+}
+
+.icon {
+    height: 4.8125rem;
+    width: 4.8125rem;
+    border-radius: 50%;
+    background: #e1a0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.875rem;
+}
+
+.title {
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 1.88rem;
+    line-height: 83%;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.88rem;
+    line-height: 107%;
+    color: #bebebe;
+}
+
+@media all and (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+}

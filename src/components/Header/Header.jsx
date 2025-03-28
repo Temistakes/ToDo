@@ -1,9 +1,10 @@
 import React, { memo } from "react";
+import cl from "./Header.module.css";
 
 const Header = () => {
     return (
-        <header className="todo__header">
-            <div className="todo__icon">
+        <header className={cl.header}>
+            <div className={cl.icon}>
                 <svg
                     width="28"
                     height="35"
@@ -18,9 +19,9 @@ const Header = () => {
                 </svg>
             </div>
 
-            <h1 className="todo__title">Lista de Compras</h1>
+            <h1 className={cl.title}>Введите имя задачи</h1>
 
-            <p className="todo__subtitle">Facilite sua ida ao supermercado!</p>
+            <p className={cl.subtitle}>Создайте свою первую задачу!</p>
         </header>
     );
 };
