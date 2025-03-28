@@ -18,6 +18,11 @@ body {
     max-width: 100vw;
     overflow: hidden;
     background: $mainBg;
+    animation: show 1s ease;
+}
+
+.wrapper .container section {
+    animation: showTodo 1s ease;
 }
 
 .main {
@@ -33,4 +38,26 @@ body {
 
 input.error {
     border-color: #f99 !important;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showTodo {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
